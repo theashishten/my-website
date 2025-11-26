@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashish — Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of a Full-Stack Digital Marketer & Creative Technologist."
+    />
+
+    <!-- 1. Import Bricolage Grotesque -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 2. Import Indie Flower for handwritten annotation -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- HEADER -->
+      <header class="top-header">
+        <div class="top-header__name">a</div>
+        <a target="_blank" class="top-header__link" href="https://www.linkedin.com/in/ashishten/">
+
+            <svg width="20"  hight="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" version="1.1" id="Capa_1" width="800px" height="800px" viewBox="0 0 93.06 93.06" xml:space="preserve">
+<g>
+	<g>
+		<path d="M11.185,0.08C5.004,0.08,0.001,5.092,0,11.259c0,6.173,5.003,11.184,11.186,11.184c6.166,0,11.176-5.011,11.176-11.184    C22.362,5.091,17.351,0.08,11.185,0.08z"/>
+		<rect x="1.538" y="30.926" width="19.287" height="62.054"/>
+		<path d="M69.925,29.383c-9.382,0-15.673,5.144-18.248,10.022h-0.258v-8.479H32.921H32.92v62.053h19.27V62.281    c0-8.093,1.541-15.932,11.575-15.932c9.89,0,10.022,9.256,10.022,16.451v30.178H93.06V58.942    C93.06,42.235,89.455,29.383,69.925,29.383z"/>
+	</g>
+</g>
+</svg>
+        </a>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <section class="section hero" id="top">
+          <!-- NOTE: Order swapped in HTML to prioritize Image first for desktop layout -->
+          <div class="hero-intro-row">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D5603AQF7ErebigpJGg/profile-displayphoto-scale_200_200/B56ZpZvWuVJwAY-/0/1762442181383?e=1766016000&v=beta&t=6P7LC_p_cSwTs2Ay2z3lwmnzT3IsVv5jveFBtlxeGP8"
+              alt="Ashish Portrait"
+              class="hero-avatar"
+            />
+            <div class="hero-greeting-text">
+              Greeting, <br />
+              <span class="hero-greeting-name">I’m Ashish Rawat</span>
+            </div>
+          </div>
+
+          <h1 class="hero__title">
+            — Full-Stack Digital Marketer & Creative Technologist who visualizes
+            brands.
+            <span class="hero-annotation">a hands-on one 💪</span>
+          </h1>
+        </section>
+
+        <!-- WORK -->
+        <section class="section work" id="work">
+          <div class="work__grid">
+            <!-- STICKY SIDEBAR -->
+            <aside class="work-sidebar">
+              <h2 class="work-sidebar-heading">
+                I do
+                <button
+                  class="filters__btn filters__btn--active"
+                  data-filter="All"
+                >
+                  All
+                </button>
+                <button class="filters__btn" data-filter="Brand Design">
+                  Brand Design
+                </button>
+                <br />
+                <button class="filters__btn" data-filter="Marketing">
+                  Marketing Experience
+                </button>
+                <button class="filters__btn" data-filter="Websites">
+                  Websites
+                </button>
+                <br />
+                <button class="filters__btn" data-filter="Automation">
+                  Automation
+                </button>
+                and everything in between.
+              </h2>
+            </aside>
+
+            <!-- PROJECTS GRID -->
+            <div class="projects" id="projects">
+              <article
+                class="project"
+                data-tag="Marketing"
+                onclick="showToast('Opened SwilERP Case Study')"
+              >
+                <div class="project__bg thumb-1"></div>
+                <div class="project__overlay">
+                  <p class="project__tag">MARKETING</p>
+                  <h3 class="project__title">SwilERP Marketing</h3>
+                  <p class="project__note">
+                    SaaS product growth, onboarding, and automation.
+                  </p>
+                  <div class="project__link">View Case Study</div>
+                </div>
+              </article>
+
+              <article
+                class="project"
+                data-tag="Brand Design"
+                onclick="showToast('Opened Ovya Home Case Study')"
+              >
+                <div class="project__bg thumb-2"></div>
+                <div class="project__overlay">
+                  <p class="project__tag">BRAND DESIGN</p>
+                  <h3 class="project__title">Ovya Home Luxury</h3>
+                  <p class="project__note">
+                    Website redesign and digital presence for luxury brand.
+                  </p>
+                  <div class="project__link">View Case Study</div>
+                </div>
+              </article>
+
+              <article
+                class="project"
+                data-tag="Websites"
+                onclick="showToast('Opened Portfolio Experiment')"
+              >
+                <div class="project__bg thumb-3"></div>
+                <div class="project__overlay">
+                  <p class="project__tag">WEBSITES</p>
+                  <h3 class="project__title">Experiments & Prototypes</h3>
+                  <p class="project__note">
+                    React / Next.js experiments and personal branding.
+                  </p>
+                  <div class="project__link">View Case Study</div>
+                </div>
+              </article>
+
+              <article
+                class="project"
+                data-tag="Automation"
+                onclick="showToast('Opened Automation Flows')"
+              >
+                <div class="project__bg thumb-4"></div>
+                <div class="project__overlay">
+                  <p class="project__tag">AUTOMATION</p>
+                  <h3 class="project__title">WhatsApp & n8n Flows</h3>
+                  <p class="project__note">
+                    Complex flows for onboarding and lead nurturing.
+                  </p>
+                  <div class="project__link">View Case Study</div>
+                </div>
+              </article>
+
+              <article
+                class="project"
+                data-tag="Brand Design"
+                onclick="showToast('Opened Inventory UX')"
+              >
+                <div class="project__bg thumb-5"></div>
+                <div class="project__overlay">
+                  <p class="project__tag">BRAND DESIGN</p>
+                  <h3 class="project__title">Inventory UX Concepts</h3>
+                  <p class="project__note">
+                    UI/UX explorations for retail management tools.
+                  </p>
+                  <div class="project__link">View Case Study</div>
+                </div>
+              </article>
+
+              <article
+                class="project"
+                data-tag="Marketing"
+                onclick="showToast('Opened Growth Systems')"
+              >
+                <div class="project__bg thumb-6"></div>
+                <div class="project__overlay">
+                  <p class="project__tag">MARKETING</p>
+                  <h3 class="project__title">Growth Systems</h3>
+                  <p class="project__note">
+                    SEO, YouTube, and Pinterest ecosystems for organic growth.
+                  </p>
+                  <div class="project__link">View Case Study</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- TOOLS & TECH -->
+        <section class="section tools" id="tools">
+          <div class="tools-container">
+            <h2 class="tools-heading">The tools I use to build brands.</h2>
+            <div class="tools-grid">
+              <div class="tool-column">
+                <div class="tool-icon">🎨</div>
+                <h3 class="tool-category">Design</h3>
+                <ul class="tool-list">
+                  <li>Figma</li>
+                  <li>Adobe CC</li>
+                  <li>Spline (3D)</li>
+                  <li>Protopie</li>
+                </ul>
+              </div>
+              <div class="tool-column">
+                <div class="tool-icon">💻</div>
+                <h3 class="tool-category">Code</h3>
+                <ul class="tool-list">
+                  <li>HTML5 / CSS3</li>
+                  <li>JavaScript (ES6+)</li>
+                  <li>React / Next.js</li>
+                  <li>Tailwind CSS</li>
+                </ul>
+              </div>
+              <div class="tool-column">
+                <div class="tool-icon">📈</div>
+                <h3 class="tool-category">Growth</h3>
+                <ul class="tool-list">
+                  <li>Google Analytics 4</li>
+                  <li>SEMrush</li>
+                  <li>Meta Ads</li>
+                  <li>HubSpot</li>
+                </ul>
+              </div>
+              <div class="tool-column">
+                <div class="tool-icon">⚡</div>
+                <h3 class="tool-category">Automation</h3>
+                <ul class="tool-list">
+                  <li>n8n</li>
+                  <li>Zapier</li>
+                  <li>OpenAI API</li>
+                  <li>Make.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- COUNTRIES SECTION (Creative) -->
+        <section class="countries-section" id="countries">
+          <div class="sticky-section-header">
+            <div class="metric-row">
+              <div class="metric-pill">02</div>
+              <div class="metric-title">Countries</div>
+            </div>
+          </div>
+          <div class="countries-body">
+            <div class="countries-grid">
+              <!-- Spacer for grid layout -->
+              <div></div>
+
+              <!-- Content Column -->
+              <div class="countries-right-col">
+                <div class="countries-content">
+                  Born and raised in India, I’ve spent the last few years
+                  working with startups across the US, Europe, and Asia.
+                  Currently, I work independently helping brands scale their
+                  digital presence.
+                  <br /><br />
+                </div>
+                <div class="flex countries-grid">
+                  <div class="countries-content">
+                    When I'm not designing for work, you'll find me designing
+                    for fun, creating quirky gifts, or playing board games with
+                    friends.
+                  </div>
+                  <div class="countries-photo-wrapper">
+                    <img
+                      src="https://images.unsplash.com/photo-1611195974226-a6a9be9dd763?w=400&h=400&fit=crop"
+                      class="countries-img"
+                      alt="Board game"
+                      onclick="showToast('Board Game: Ticket to Ride')"
+                    />
+
+                    <!-- Arrow -->
+                    <svg
+                      class="countries-arrow"
+                      viewBox="0 0 100 100"
+                      fill="none"
+                    >
+                      <path
+                        d="M80 30 Q 50 60 20 50"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M20 50 L 30 40 L 30 60"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+
+                    <span class="countries-arrow-text">Like this game</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- YEARS IN INDUSTRY (Organized Timeline) -->
+        <section id="years">
+          <div class="sticky-section-header">
+            <div class="metric-row">
+              <div class="metric-pill">10+</div>
+              <div class="metric-title">Years in the industry</div>
+            </div>
+          </div>
+          <div class="metric-body">
+            <div class="timeline">
+              <div class="timeline__row">
+                <div class="timeline__year">2010 - 2014</div>
+                <div class="timeline__company">AiO Studio</div>
+                <div class="timeline__role">Graphic Designer</div>
+              </div>
+
+              <div class="timeline__row">
+                <div class="timeline__year">2014 - 2016</div>
+                <div class="timeline__company">MOV Communication</div>
+                <div class="timeline__role">Graphic Designer</div>
+              </div>
+
+              <div class="timeline__row">
+                <div class="timeline__year">2016 - 2018</div>
+                <div class="timeline__company">Various Clients</div>
+                <div class="timeline__role">Brand Designer / Art Director</div>
+              </div>
+
+              <div class="timeline__row">
+                <div class="timeline__year">2018 - 2020</div>
+                <div class="timeline__company">SUNY Oswego</div>
+                <div class="timeline__role">
+                  MA Graphic Design &<br />Digital Media
+                </div>
+              </div>
+
+              <div class="timeline__row">
+                <div class="timeline__year">2020 - 2025</div>
+                <div class="timeline__company">TangoSquared</div>
+                <div class="timeline__role">
+                  Senior Designer<br />Design Director
+                </div>
+              </div>
+
+              <div class="timeline__row">
+                <div class="timeline__year">2025 - Present</div>
+                <div class="timeline__company">WHQ</div>
+                <div class="timeline__role">Design Director</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+  
+
+        <!-- COLLABORATIONS -->
+        <section id="collaborations">
+          <div class="sticky-section-header">
+            <div class="metric-row">
+              <div class="metric-pill">100+</div>
+              <div class="metric-title">Collaborations</div>
+            </div>
+          </div>
+          <div class="metric-body">
+            <div
+              style="
+                max-width: 42rem;
+                font-size: 1.05rem;
+                color: var(--text-muted);
+                line-height: 1.7;
+              "
+            >
+              <p style="margin-bottom: 1.5rem">
+                I like working closely with founders, marketing teams, and
+                developers—shaping how the brand looks, feels, and actually
+                performs in the wild.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- AI PLAYGROUND -->
+        <!-- <section id="ai-playground">
+          <div class="sticky-section-header">
+            <div class="metric-row" style="align-items: center">
+              <div>
+                <div class="metric-title" style="color: var(--ai-accent)">
+                  AI Playground ✨
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="metric-body">
+            <div class="ai-container">
+              <div class="ai-input-group">
+                <input
+                  type="text"
+                  id="aiInput"
+                  class="ai-input"
+                  placeholder="e.g., Organic Coffee, Smart Watch, Digital Agency..."
+                />
+                <div class="ai-actions">
+                  <button
+                    class="btn-ai"
+                    onclick="generateCreativeCopy('slogans')"
+                  >
+                    ✨ 3 Catchy Slogans
+                  </button>
+                  <button
+                    class="btn-ai"
+                    onclick="generateCreativeCopy('elevator')"
+                  >
+                    ✨ Elevator Pitch
+                  </button>
+                  <button
+                    class="btn-ai"
+                    onclick="generateCreativeCopy('social')"
+                  >
+                    ✨ Viral Social Hook
+                  </button>
+                  <button
+                    class="btn-ai"
+                    onclick="generateCreativeCopy('ask_me')"
+                  >
+                    ✨ Ask About Me
+                  </button>
+                </div>
+              </div>
+
+              <div class="ai-output-area">
+                <div id="aiLoader" class="ai-loader">
+                  <div class="spinner"></div>
+                </div>
+                <div id="aiOutput" class="ai-result-content">
+                  <div class="ai-placeholder">Results will appear here...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+              <!-- PHILOSOPHY SECTION (Updated 6 Cards 3D Flip) -->
+        <section class="section philosophy-section" id="philosophy">
+          <div class="philosophy-header-group">
+            <h2 class="philosophy-heading">
+              Here are 6 philosophies you can always expect from me
+            </h2>
+
+            <div class="philosophy-cta-container">
+              <div
+                class="philosophy-cta-pill countries-img"
+                onclick="showToast('Loading full manifesto...')"
+              >
+                Hover to see more <span>→</span>
+              </div>
+              <svg
+                class="philosophy-arrow"
+                viewBox="0 0 120 120"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 40 C -10 20, 10 0, 40 10 C 70 20, 30 60, 15 75"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5 70 L 15 75 L 25 65"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="philosophies-grid">
+            <!-- 1. Design Strategy -->
+            <div class="philosophy-card">
+              <div class="philosophy-card-inner">
+                <div class="philosophy-front">
+                  <div class="philosophy-text">
+                    Design should be at the strategy table.
+                  </div>
+                  <svg
+                    class="philosophy-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M18.667 17.333c0 2.667-6.667 3.667-6.667 3.667s-6.667-1-6.667-3.667V8.667c0-2.667 6.667-3.667 6.667-3.667s6.667 1 6.667 3.667v8.666z"
+                    />
+                    <line x1="12" y1="3" x2="12" y2="5" />
+                  </svg>
+                </div>
+                <div class="philosophy-back">
+                  <div class="philosophy-desc">
+                    I believe design isn't just about pretty pixels. It's a core
+                    business function that solves problems, drives revenue, and
+                    shapes culture from day one.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. First Impressions -->
+            <div class="philosophy-card">
+              <div class="philosophy-card-inner">
+                <div class="philosophy-front">
+                  <div class="philosophy-text">First impressions matter.</div>
+                  <svg
+                    class="philosophy-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="12" y1="2" x2="12" y2="6" />
+                    <line x1="12" y1="18" x2="12" y2="22" />
+                    <line x1="4.93" y1="4.93" x2="7.76" y2="7.76" />
+                    <line x1="16.24" y1="16.24" x2="19.07" y2="19.07" />
+                    <line x1="2" y1="12" x2="6" y2="12" />
+                    <line x1="18" y1="12" x2="22" y2="12" />
+                    <line x1="4.93" y1="19.07" x2="7.76" y2="16.24" />
+                    <line x1="16.24" y1="7.76" x2="19.07" y2="4.93" />
+                  </svg>
+                </div>
+                <div class="philosophy-back">
+                  <div class="philosophy-desc">
+                    Users form an opinion in 50ms. I ensure that split-second
+                    judgment is positive and professional.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Get Things Done -->
+            <div class="philosophy-card">
+              <div class="philosophy-card-inner">
+                <div class="philosophy-front">
+                  <div class="philosophy-text">
+                    I get things done, the right way.
+                  </div>
+                  <svg
+                    class="philosophy-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                </div>
+                <div class="philosophy-back">
+                  <div class="philosophy-desc">
+                    No shortcuts. I build scalable systems that work as
+                    beautifully under the hood as they look on the surface.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Keep it Easy -->
+            <div class="philosophy-card">
+              <div class="philosophy-card-inner">
+                <div class="philosophy-front">
+                  <div class="philosophy-text">
+                    I like to keep things easy for everyone.
+                  </div>
+                  <svg
+                    class="philosophy-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
+                <div class="philosophy-back">
+                  <div class="philosophy-desc">
+                    Complexity is the enemy. I strive for clarity, simplicity,
+                    and zero friction in every user interaction.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Typography (NEW) -->
+            <div class="philosophy-card">
+              <div class="philosophy-card-inner">
+                <div class="philosophy-front">
+                  <div class="philosophy-text">I’m all about typography.</div>
+                  <svg
+                    class="philosophy-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 7V4h16v3" />
+                    <path d="M9 20h6" />
+                    <path d="M12 4v16" />
+                  </svg>
+                </div>
+                <div class="philosophy-back">
+                  <div class="philosophy-desc">
+                    Type is the voice of design. I obsess over kerning, leading,
+                    and font pairings to ensure the message is clear.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Curiosity (NEW) -->
+            <div class="philosophy-card">
+              <div class="philosophy-card-inner">
+                <div class="philosophy-front">
+                  <div class="philosophy-text">
+                    I’m curious and love learning.
+                  </div>
+                  <svg
+                    class="philosophy-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  </svg>
+                </div>
+                <div class="philosophy-back">
+                  <div class="philosophy-desc">
+                    I never stop asking why. Continuous learning allows me to
+                    adapt to new technologies and trends quickly.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+          <p class="contact__lead">I currently take on selected projects.</p>
+          <p class="contact__title">So, what’s next?</p>
+          <div class="contact__actions">
+            <button
+              class="btn btn--primary"
+              onclick="showToast('Email address copied!')"
+            >
+              Email me
+            </button>
+            <a class="btn btn--ghost" href="#top">Back to top</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Designed &amp; built by Ashish</span>
+        <span>© <span id="year"></span> • All rights reserved</span>
+      </footer>
+    </div>
+
+    <!-- Toast UI Element -->
+    <div id="toast" class="toast">Action Successful</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
