@@ -688,23 +688,24 @@ button {
 /* --- STICKY METRICS HEADERS --- */
 .sticky-section-header {
   position: sticky;
-  top: var(--header-height);
+  /* 1. Changed top to be 1px lower than header height */
+  top: calc(var(--header-height) + 1px);
   z-index: 50;
-  background: rgba(255, 255, 255, 0.95);
+  /* 2. Increased opacity */
+  background: rgba(255, 255, 255, 0.98);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   padding: 1rem 1.5rem;
-  margin-top: -1px;
+  margin-top: -1px; 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) { .sticky-section-header { padding: 1.25rem 4rem; } }
+@media (min-width: 1024px) { .sticky-section-header { padding: 1.25rem 6rem; } }
+
+/* 3. NEW MOBILE RULE: Pushes sticky header down further on mobile to be safe */
+@media (max-width: 768px) {
   .sticky-section-header {
-    padding: 1.25rem 4rem;
-  }
-}
-@media (min-width: 1024px) {
-  .sticky-section-header {
-    padding: 2rem 6rem;
+      top: 85px; 
   }
 }
 
