@@ -826,6 +826,13 @@ button {
   margin: 0 0 1.5rem 0;
 }
 
+@media (max-width: 768px) {
+  .philosophy-header-group {
+    flex-direction: column;
+    gap: 1.5rem; /* optional spacing */
+  }
+}
+
 @media (min-width: 768px) {
   .philosophy-heading {
     font-size: 3.5rem;
